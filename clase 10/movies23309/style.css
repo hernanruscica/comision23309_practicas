@@ -1,0 +1,89 @@
+/* Ejercitacion : codigo a mejorar */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Monserrat",sans-serif;
+    background-color: azure;
+    color: #1d1d1d;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin:40px auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    -ms-grid-colums: repeat(4,1fr);
+    gap: 40px   
+}
+
+@media (max-width: 600px){
+    .contenedor{
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-colums: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 400px){
+    .contenedor{
+        grid-template-columns: repeat(1, 1fr);
+        -ms-grid-colums: repeat(1,1fr);
+    }
+}
+
+.contenedor .pelicula{
+text-align: center;
+}
+
+
+
+.contenedor .pelicula .poster{
+    width:100%;
+    margin-bottom: 10px;
+    border-radius: 15px
+}
+
+.paginacion{
+    position: fixed;
+    bottom: 2vh;
+    left: 10vw;
+    background: #FFD966;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding:10px;    
+    border-radius: 20px;
+}
+
+.paginacion #titulo{
+    font-size: 16px;
+    font-weight:600px;
+    color: #666;
+}
+
+.paginacion button {
+    cursor:pointer;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    background: #DFA67B;
+    color:#FFF2CC;
+    border-radius: 100px;
+    font-family: "Monserrat",sans-serif;
+    font-weight: 600;
+    transition: .3s ease all;
+}
+
+.paginacion button:hover{
+    background-color: #CCD5AE;
+}
